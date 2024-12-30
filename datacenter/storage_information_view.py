@@ -9,7 +9,7 @@ def storage_information_view(request):
 
     for visitor in active_visitors:
         name = visitor.passcard
-        duration, entered_at = get_duration(visitor)
+        duration, entered_at = get_duration(visitor), visitor.entered_at
         duration = format_duration(duration)
 
         visitor_dict = {
